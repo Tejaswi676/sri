@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+ 
+ public static void main(String[] args) {
+
+ System.out.println("program for addition program");
+
+ Scanner sc=new Scanner(System.in);
+
+ System.out.println(" enter the num1:");
+
+ float num1= sc.nextFloat();
+ 
+ System.out.println(" enter the num2:");
+
+  float num2= sc.nextFloat();
+
+  float num3=num1+num2;
+
+  System.out.println(" the addition  performed is"+num3);
+ }
+
+}
