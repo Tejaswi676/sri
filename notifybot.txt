@@ -1,0 +1,13 @@
+import requests
+from win10toast import ToastNotifier
+import json
+import time
+def tododate():
+    a=requests.get('https://coronavirus-19-api.herokuapp.com/all')
+    data=a.json()
+    text=f'confirmed cases: {data["cases"]}\n deaths:{data["deaths"]}\n recovered:{data["recovered"]}'
+    while True :
+        toast=ToastNotifier()
+        toast.show_toast("COVID 19 data",text,duration=20)
+        time.sleep(30)
+tododate()    
